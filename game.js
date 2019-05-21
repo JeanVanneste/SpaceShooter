@@ -1,15 +1,15 @@
-const width=270;
-const height=480;
+const areaWidth=270;
+const areaHeight=480;
 
 function startGame(){
-    myGameArea.start();
+    gameArea.start();
 }
 
 var gameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = width
-        this.canvas.height = height
+        this.canvas.width = areaWidth
+        this.canvas.height = areaHeight
         this.context = this.canvas.getContext("2d")
         document.body.insertBefore(this.canvas, document.body.childNode[0])
         this.frameNo = 0

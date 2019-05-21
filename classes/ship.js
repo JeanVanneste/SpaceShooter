@@ -14,8 +14,9 @@ class Ship {
 }
 
 class UserShip extends Ship {
-    constructor() {
-        super("blue", 25, 25, width/2, height/2)
+    constructor(healthPoint) {
+        super("blue", 25, 25, width/2, height/2);
+        this.healthPoint = healthPoint;
     }
 }
 

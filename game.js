@@ -3,6 +3,7 @@ const areaHeight=480;
 
 function startGame(){
     gameArea.start();
+    userShip = new UserShip(100);
 }
 
 var gameArea = {

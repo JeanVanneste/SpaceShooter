@@ -7,7 +7,7 @@ class Ship {
         this.y = y;
     }
     update() {
-        ctx = myGameArea.context;
+        ctx = gameArea.context;
         ctx.fillStyle = this.color
         ctx.fillRect(this.x, this.y, this.width, this.height)
     }

@@ -3,6 +3,5 @@ class gameArea {
         this.width = width
         this.height = height
         this.interval = interval
-    }
-    
+    }    
 }

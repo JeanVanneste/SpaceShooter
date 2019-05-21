@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>spaceshooter</title>
+    <style>
+    canvas {
+        border: 1px solid #d3d3d3;
+        background-color: #f1f1f1;
+    }
+    </style>
+</head>
+<body onload="startGame()">
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDpcGEUibxrdB9cpi9KWI0hkaOnwox5oDI",
+        authDomain: "spaceshooter-3c83d.firebaseapp.com",
+        databaseURL: "https://spaceshooter-3c83d.firebaseio.com",
+        projectId: "spaceshooter-3c83d",
+        storageBucket: "spaceshooter-3c83d.appspot.com",
+        messagingSenderId: "713484819345"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="game.js"></script>
+</body>
+</html>

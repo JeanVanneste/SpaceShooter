@@ -17,14 +17,14 @@ class UserShip extends Ship {
     constructor(healthPoint) {
         super("blue", 25, 25, areaWidth/2, areaHeight/2);
         this.healthPoint = healthPoint;
-        this.shotPeriod = gameArea.interval/4;
+        this.shotPeriod = gameArea.interval*12;
     }
 }
 
 class EnnemyShip extends Ship {
     constructor (width, height, x, y) {
         super("red", width, height, x, y);
-        this.shotPeriod = gameArea.interval/2;
+        this.shotPeriod = gameArea.interval*25;
         this.shotStart = 5;
     }
 }

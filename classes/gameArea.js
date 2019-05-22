@@ -1,6 +1,6 @@
-class gameArea {
+class GameArea {
     constructor(width, height, interval) {
-        document.createElement("canvas");
+        this.canvas = document.createElement("canvas");
         this.width = width
         this.height = height
         this.interval = interval

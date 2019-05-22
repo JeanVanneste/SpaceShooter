@@ -5,11 +5,33 @@ class Ship {
         this.height = height;
         this.x = x;
         this.y = y;
+        this.speedX = 0;
     }
     update() {
+        this.newPos();
         gameArea.context.fillStyle = this.color
         gameArea.context.fillRect(this.x, this.y, this.width, this.height)
     }
+    newPos() {
+        if (this.x < 0 && this.speedX < 0) {
+            this.x = 0;
+            this.speedX = 0;
+        }
+        else if (this.x >= areaWidth -26 && this.speedX > 0) {
+            this.x = areaWidth-26;
+            this.speedX = 0;
+        }
+        else {
+            this.x += this.speedX;
+        }
+    }
+    moveLeft() {
+        this.speedX -= 1;
+    }
+    moveRight() {
+        this.speedX += 1;
+    }
+
 }
 
 class UserShip extends Ship {

@@ -1,6 +1,6 @@
 class GameArea {
     constructor(width, height, interval) {
-        this.canvas = document.createElement("canvas");
+        this.canvas = document.getElementById("canvas");
         this.width = width
         this.height = height
         this.interval = interval
@@ -13,7 +13,5 @@ class GameArea {
     }
     clear() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
-
-    
+    }    
 }

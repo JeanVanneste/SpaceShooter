@@ -10,5 +10,4 @@ function updateGameArea() {
 function startGame(){
     gameArea = new GameArea(areaWidth, areaHeight, 20);
     gameArea.start();
-    userShip = new UserShip(100);
 }

@@ -7,15 +7,14 @@ class Ship {
         this.y = y;
     }
     update() {
-        ctx = gameArea.context;
-        ctx.fillStyle = this.color
-        ctx.fillRect(this.x, this.y, this.width, this.height)
+        gameArea.context.fillStyle = this.color
+        gameArea.context.fillRect(this.x, this.y, this.width, this.height)
     }
 }
 
 class UserShip extends Ship {
     constructor(healthPoint) {
-        super("blue", 25, 25, areaWidth/2, areaHeight/2);
+        super("blue", 25, 25, areaWidth/2 -12, areaHeight-25 -5);
         this.healthPoint = healthPoint;
         this.shotPeriod = gameArea.interval*12;
     }

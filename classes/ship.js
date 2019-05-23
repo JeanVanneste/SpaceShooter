@@ -6,6 +6,7 @@ class Ship {
         this.x = x;
         this.y = y;
         this.speedX = 0;
+        this.baseSpeed = 2;
     }
     update() {
         this.newPos();
@@ -15,21 +16,22 @@ class Ship {
     newPos() {
         if (this.x < 0 && this.speedX < 0) {
             this.x = 0;
-            this.speedX = 0;
         }
         else if (this.x >= areaWidth -26 && this.speedX > 0) {
             this.x = areaWidth-26;
-            this.speedX = 0;
         }
         else {
             this.x += this.speedX;
         }
     }
     moveLeft() {
-        this.speedX -= 1;
+        this.speedX -= this.baseSpeed;
     }
     moveRight() {
-        this.speedX += 1;
+        this.speedX += this.baseSpeed;
+    }
+    stop() {
+        this.speedX = 0;
     }
 
 }

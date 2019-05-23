@@ -3,6 +3,8 @@ const areaHeight=480;
 
 function updateGameArea() {
     gameArea.clear();
+    //gameArea.leftBtn.update();
+    //gameArea.rightBtn.update();
     gameArea.playerShip.update();
 }
 

@@ -23,6 +23,7 @@ class Ship {
         else {
             this.x += this.speedX;
         }
+        this.y +=1
     }
     moveLeft() {
         this.speedX -= this.baseSpeed;
@@ -51,7 +52,6 @@ class UserShip extends Ship {
         else {
             this.x += this.speedX;
         }
-        this.y -= 2;
     }
 }
 

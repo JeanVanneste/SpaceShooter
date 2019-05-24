@@ -33,7 +33,6 @@ class Ship {
     stop() {
         this.speedX = 0;
     }
-
 }
 
 class UserShip extends Ship {
@@ -41,6 +40,18 @@ class UserShip extends Ship {
         super("blue", 25, 25, areaWidth/2 -12, areaHeight-25 -5);
         this.healthPoint = healthPoint;
         this.shotPeriod = gameArea.interval*12;
+    }
+    newPos() {
+        if (this.x < 0 && this.speedX < 0) {
+            this.x = 0;
+        }
+        else if (this.x >= areaWidth -26 && this.speedX > 0) {
+            this.x = areaWidth-26;
+        }
+        else {
+            this.x += this.speedX;
+        }
+        this.y -= 2;
     }
 }
 

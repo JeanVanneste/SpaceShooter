@@ -15,6 +15,12 @@ class GameArea {
         //this.rightBtn = new Button(30,30, 230, 440);
 
         this.playerShip = new UserShip(100);
+        this.ennemyShip = new EnnemyShip(40, 40, 100, 30);
+
+        window.addEventListener('touchmove', function(e) {
+            this.x = e.touches[0].screenX;
+            this.y = e.touches[0].screenY;
+        })
     }
     clear() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);

@@ -12,7 +12,7 @@
     <style>
         canvas {
             border: 1px solid #d3d3d3;
-            background-color: #f1f1f1;
+        background-color: #f1f1f1;
         }
     </style>
 </head>
@@ -20,7 +20,9 @@
     
     <canvas id="canvas" width="270", height="480"></canvas><br />
     <button type="button" onmousedown="gameArea.playerShip.moveLeft()" onmouseup="gameArea.playerShip.stop()">Gauche</button>
-    <button type="button" onmousedown="gameArea.playerShip.moveRight()" onmouseup="gameArea.playerShip.stop()">Droite</button>
-    
+    <button type="button" onmousedown="gameArea.playerShip.moveRight()" onmouseup="gameArea.playerShip.stop()">Droite</button><br />   
+    <button type="button" onclick="gameArea.stop()">Pause</button>
+    <button type="button" onclick="gameArea.restart()">Unpause</button><br />
+    <button onclick="gameArea.start()">Restart</button>
 </body>
 </html>

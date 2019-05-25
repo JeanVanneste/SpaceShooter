@@ -25,4 +25,10 @@ class GameArea {
     clear() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
+    stop() {
+        clearInterval(this.interval);
+    }
+    restart() {
+        this.interval = setInterval(updateGameArea, this.interval)
+    }
 }

@@ -57,7 +57,7 @@ class UserShip extends Ship {
 
 class EnnemyShip extends Ship {
     constructor (width, height, x, y) {
-        super("red", width, height, x, y);
+        super("green", width, height, x, y);
         this.shotPeriod = gameArea.interval*25;
         this.shotStart = 5;
     }

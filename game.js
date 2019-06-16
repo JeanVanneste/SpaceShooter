@@ -17,11 +17,18 @@ function updateGameArea() {
         if (gameArea.playerShip.isIn(bullet.x, bullet.y)) {
             return gameArea.gameOver();
         }
+        if (bullet.y > gameArea.height) {
+            gameArea.ennemyBullets.delete(id);
+        }
     }
     for (const [id, bullet] of gameArea.playerBullets) {
         bullet.update();
         if (gameArea.ennemyShip.isIn(bullet.x, bullet.y)) {
+            console.log(gameArea.playerBullets.delete(id));
             gameArea.points++;
+        }
+        if (bullet.y < 0) {
+            gameArea.playerBullets.delete(id);
         }
     }
     gameArea.score.update();

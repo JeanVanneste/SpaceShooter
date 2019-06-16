@@ -20,7 +20,7 @@ class GameArea {
         // this.rightBtn = new Button(30,30, 230, 440);
 
         this.playerShip = new UserShip(100);
-        this.ennemyShip = new EnnemyShip(40, 40, 100, 30);
+        this.ennemyShip = new EnnemyShip(50, 30, 100, 30);
         this.ennemyBullets = new Map();
         this.playerBullets = new Map();
 

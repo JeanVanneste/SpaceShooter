@@ -25,12 +25,13 @@ function updateGameArea() {
         bullet.update();
         if (gameArea.ennemyShip.isIn(bullet.x, bullet.y)) {
             console.log(gameArea.playerBullets.delete(id));
-            gameArea.points++;
+            gameArea.points = gameArea.points + 100;
         }
         if (bullet.y < 0) {
             gameArea.playerBullets.delete(id);
         }
     }
+    gameArea.points++;
     gameArea.score.update();
     // console.clear();
     // console.log(gameArea.frame);

@@ -91,7 +91,7 @@ class EnnemyShip extends Ship {
     shot() {
         if ((gameArea.frame >= this.frameStart + this.shotStart) && (Math.random() >= 0.975)) {
             gameArea.ennemyBulletCount++;
-            let shotSpeed = ((gameArea.frame / 500) + 0.5) % 1 + 1;
+            let shotSpeed = Math.round((gameArea.frame / 500) + 0.5);
             const bullet = new EnnemyBullet(this.x + this.width / 2, this.y + this.height, 1, 0, shotSpeed);
             gameArea.ennemyBullets.set(gameArea.ennemyBulletCount, bullet);
         }

@@ -24,7 +24,7 @@ function updateGameArea() {
     for (const [id, bullet] of gameArea.playerBullets) {
         bullet.update();
         if (gameArea.ennemyShip.isIn(bullet.x, bullet.y)) {
-            console.log(gameArea.playerBullets.delete(id));
+            gameArea.playerBullets.delete(id);
             gameArea.points = gameArea.points + 100;
         }
         if (bullet.y < 0) {

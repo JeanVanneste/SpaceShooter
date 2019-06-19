@@ -25,7 +25,7 @@ app.use('/scores', (req, res, next) => {
 
 app.get('/scores', (req, res) => {
     console.log('GET SCORES');
-    scores.find({}).sort({score: -1}).exec(
+    scores.find({}).sort({score: -1}).limit(5).exec(
         (err, docs) => {
             if(err) {
                 console.log(err);

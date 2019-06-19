@@ -21,10 +21,10 @@ app.use('/scores', (req, res, next) => {
     res.set('Access-Control-Allow-Origin', '*');
     console.log('SET CROSS ORIGIN');
     next();
-})
+});
 
 app.get('/scores', (req, res) => {
-    console.log("GET SCORES");
+    console.log('GET SCORES');
     scores.find({}).sort({score: -1}).exec(
         (err, docs) => {
             if(err) {
@@ -33,15 +33,15 @@ app.get('/scores', (req, res) => {
 
             res.send({
                 scores: docs
-            })
-        })
-})
+            });
+        });
+});
 
 app.options('/scores', (req, res) => {
     res.set('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
     res.set('AccessControl-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
     res.send(200);
-})
+});
 
 app.post('/scores', (req, res) => {
     if(req.body) {
@@ -55,21 +55,21 @@ app.post('/scores', (req, res) => {
                 res.send({
                     ok: false,
                     error: err
-                })
+                });
             }
 
             res.send({
                 ok: true
-            })
-        })
+            });
+        });
     }
     else {
         res.send({
             ok: false,
             error: 'No Body Provided'
-        })
+        });
     }
-})
+});
 
 var httpServer = http.createServer(app);
 
@@ -77,4 +77,4 @@ const port = 3030;
 
 httpServer.listen(port, () => {
     console.log(`HTTP Server listening on port ${port}`);
-})
+});

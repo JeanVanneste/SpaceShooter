@@ -3,13 +3,22 @@
     <head>
         <meta charset="utf-8">
         <title>SpaceShooter</title>
+        <script>
+            function validateForm() {
+                let x = document.forms["score"]["player"].value;
+                if (x.length != 3) {
+                    alert("Nom invalide");
+                    return false;
+                }
+            }
+        </script>
     </head>
     <body>
         <h1>Space Shooter</h1>
         <a href="leaderboard.html"><h2>Leaderboard</h2></a>
         <h2>Play space shooter</h2>
         <p>Choisissez votre nom</p>
-        <form action="game.html">
+        <form name="score" action="game.html" onsubmit="return validateForm()">
             Nom (3 caractères)
             <input type="text" name="player" size="3">
             <input type="submit">

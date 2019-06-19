@@ -1,5 +1,6 @@
 class GameArea {
     constructor(width, height, interval) {
+        const params = new URLSearchParams(document.location.search.substring(1));
         this.canvas = document.getElementById('canvas');
         this.width = width;
         this.height = height;
@@ -8,6 +9,7 @@ class GameArea {
         this.playerBulletCount = 0;
         this.score = new Score(20, 'Consolas', this.width - 230);
         this.points = 0;
+        this.playerName = params.get('player').toUpperCase();
     }
     start() {
         this.canvas.width = areaWidth;
@@ -44,7 +46,7 @@ class GameArea {
         this.context.fillStyle = 'black';
         this.context.fillText('Game Over', 70, 240);
         this.context.fillText('Score : ' + this.points, 74, 270);
-        sendScore('TES');
+        sendScore(this.playerName);
     }
 }
 

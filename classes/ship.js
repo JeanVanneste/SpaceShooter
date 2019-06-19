@@ -47,7 +47,7 @@ class UserShip extends Ship {
     constructor(healthPoint) {
         super('blue', 25, 25, areaWidth / 2 - 12, areaHeight - 25 - 5);
         this.healthPoint = healthPoint;
-        this.shotPeriod = gameArea.interval * 2;
+        this.shotPeriod = gameArea.interval / 2;
     }
     newPos() {
         if (this.x < 0 && this.speedX < 0) {

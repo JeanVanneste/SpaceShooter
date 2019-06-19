@@ -41,3 +41,13 @@ function startGame() {
     gameArea = new GameArea(areaWidth, areaHeight, 20);
     gameArea.start();
 }
+
+function sendScore(code) {
+    fetch('http://localhost:3030/scores', {
+        method : 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: `{"name": "${code}", "score": ${gameArea.points}}`,
+    });
+}

@@ -44,6 +44,7 @@ class GameArea {
         this.context.fillStyle = 'black';
         this.context.fillText('Game Over', 70, 240);
         this.context.fillText('Score : ' + this.points, 74, 270);
+        sendScore('TES');
     }
 }
 

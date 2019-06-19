@@ -30,6 +30,12 @@ app.get('/scores', (req, res) => {
             if(err) {
                 console.log(err);
             }
+            
+            /*
+            fs.writeFile('log/debug.log', docs, (err) => {
+                if (err) console.log(err);
+            });
+            */
 
             res.send({
                 scores: docs
@@ -39,7 +45,7 @@ app.get('/scores', (req, res) => {
 
 app.options('/scores', (req, res) => {
     res.set('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
-    res.set('AccessControl-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+    res.set('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
     res.send(200);
 });
 

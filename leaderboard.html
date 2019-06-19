@@ -2,8 +2,20 @@
 <html>
 <head>
     <title>Leaderboard SpaceShooter</title>
+    <script>
+        function createLeaderboard(scores) {
+            let leaderboard = '';
+            for (score in scores) {
+                leaderboard = leaderboard + `<li>${score.player} ${score.score}</li>`;
+            }
+            return leaderboard;
+        }
+        document.getElementById("scores").innerHTML = createLeaderboard(scores);
+    </script>
 </head>
 <body>
     <h1>Leaderboard Spaceshooter</h1>
+    <ol id="scores">
+    </ol>
 </body>
 </html>
